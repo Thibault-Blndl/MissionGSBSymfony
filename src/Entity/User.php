@@ -39,32 +39,32 @@ class User implements UserInterface
         return $this->id;
     }
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=180)
      */
     private $nom;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=180)
      */
     private $prenom;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=180)
      */
     private $adresse;
 
     /**
-     * @ORM\Column(type="string", length=5, unique=true)
+     * @ORM\Column(type="string", length=5)
      */
     private $codePostal;
 
     /**
-     * @ORM\Column(type="string", length=180, unique=true)
+     * @ORM\Column(type="string", length=180)
      */
     private $ville;
 
     /**
-     * @ORM\Column(type="date", length=180, unique=true)
+     * @ORM\Column(type="date", length=180)
      */
     private $dateEmbauche;
 
