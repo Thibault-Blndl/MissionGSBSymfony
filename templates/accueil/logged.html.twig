@@ -14,7 +14,7 @@
 
     {% if currentUser.getTypeUser().id == 1 %}
         ce texte est destiné aux visiteurs
-    {% else if currentUser.getTypeUser().id == 2 %}
+    {% elseif currentUser.getTypeUser().id == 2 %}
         ce texte est destiné aux comptables
     {% else %}
         ce texte est destiné aux admins

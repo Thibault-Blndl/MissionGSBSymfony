@@ -1,18 +1,43 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#a7c9dc">
-    <a class="navbar-brand" href="/accueil">Accueil</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+<!DOCTYPE html>
+<html>
 
-            {% if is_granted("ROLE_USER") %}
-                <a class="nav-item nav-link" href="{{ path('app_logout') }}">Se déconnecter</a>
-            {% else %}
-                <a class="nav-item nav-link" href="/specialites">Le SI</a>
-                <a class="nav-item nav-link" href="/stage">Le Réseau</a>
-                <a class="nav-item nav-link" href="{{ path('app_login') }}">Se connecter</a>
-            {% endif %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <script src="js/query.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar d-flex">
+    <div class="container"><a class="navbar-brand logo d-flex" href="{{ path('accueil') }}"><img src="img/logo.png" style="width: 18%;height: 18%;"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+        {% if is_granted("ROLE_USER") %}
+        <ul class="nav navbar-nav ml-auto pr-5">
+            <li class="nav-item"><a class="nav-link active" href="{{ path('app_logout') }}">Se Déconnecter</a></li>
+        </ul>
+        {% else %}
+            <div class="dropdown pr-5"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Le SI </a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="{{ path('si') }}">Découvrir</a>
+            </div>
+            <div class="dropdown pr-5"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Le Réseau </a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="{{ path('reseau') }}">Découvrir</a>
+                </div>
+            </div>
+                <ul class="nav navbar-nav ml-auto pr-5">
+                    <li class="nav-item"><a class="nav-link active" href="{{ path ('app_login') }}">Se Connecter</a></li>
+                </ul>
+                {% endif %}
         </div>
     </div>
 </nav>
