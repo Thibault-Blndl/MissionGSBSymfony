@@ -1,17 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Hello {{ app.user.username }} {% endblock %}
+
 
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .example-wrapper code { background: #f5f5f5; padding: 2px 6px; }
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello unLogged user ! ✅</h1>
+    <h1>Hello {{ app.user.username }} {{ currentUser.getTypeUser() }}✅</h1>
 
-    This friendly message is coming from:
+    {% if currentUser.getTypeUser().id == 1 %}
+        ce texte est destiné aux visiteurs
+    {% else if currentUser.getTypeUser().id == 2 %}
+        ce texte est destiné aux comptables
+    {% else %}
+        ce texte est destiné aux admins
+    {% endif %}
+
     <ul>
         <li>Your controller at <code><a href="{{ '/Users/Thibault/Desktop/MissionGSBSymfony/src/Controller/AccueilController.php'|file_link(0) }}">src/Controller/AccueilController.php</a></code></li>
         <li>Your template at <code><a href="{{ '/Users/Thibault/Desktop/MissionGSBSymfony/templates/accueil/index.html.twig'|file_link(0) }}">templates/accueil/index.html.twig</a></code></li>

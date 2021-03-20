@@ -74,6 +74,27 @@ class User implements UserInterface
     private $fichesFrais;
 
     /**
+     * @ORM\ManyToOne(targetEntity=TypeUser::class, inversedBy="users")
+     */
+    private $typeUser;
+
+    /**
+     * @return mixed
+     */
+    public function getTypeUser()
+    {
+        return $this->typeUser;
+    }
+
+    /**
+     * @param mixed $typeUser
+     */
+    public function setTypeUser($typeUser): void
+    {
+        $this->typeUser = $typeUser;
+    }
+
+    /**
      * A visual identifier that represents this user.
      *
      * @see UserInterface
