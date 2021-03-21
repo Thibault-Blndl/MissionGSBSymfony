@@ -2,11 +2,9 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\TypeUser;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\User;
-use Symfony\Component\PropertyInfo\Type;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserFixtures extends Fixture

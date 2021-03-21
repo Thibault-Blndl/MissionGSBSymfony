@@ -59,6 +59,11 @@ class FicheFrais
      */
     private $lignesFraisHorsForfait;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $motifRefus;
+
     public function __construct()
     {
         $this->lignesFraisHorsForfait = new ArrayCollection();
