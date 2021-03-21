@@ -16,7 +16,7 @@
             {% if app.user.getTypeUser().id == 1 %}
                 <ul class="navbar-nav pr-5">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ path('user_show', {'id': app.user.id}) }}">Mes Fiches de Frais</a>
+                        <a class="nav-link active" href="{{ path('fiche_frais_index') }}">Mes Fiches de Frais</a>
                     </li>
                 </ul>
             {% endif %}

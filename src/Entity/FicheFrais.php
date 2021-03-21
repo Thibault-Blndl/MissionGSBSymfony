@@ -20,7 +20,7 @@ class FicheFrais
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=6, nullable=true)
+     * @ORM\Column(type="date", nullable=true)
      */
     private $mois;
 
@@ -58,6 +58,22 @@ class FicheFrais
      * @ORM\OneToMany(targetEntity=LigneFraisHorsForfait::class, mappedBy="fiche")
      */
     private $lignesFraisHorsForfait;
+
+    /**
+     * @return mixed
+     */
+    public function getMotifRefus()
+    {
+        return $this->motifRefus;
+    }
+
+    /**
+     * @param mixed $motifRefus
+     */
+    public function setMotifRefus($motifRefus): void
+    {
+        $this->motifRefus = $motifRefus;
+    }
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -108,12 +124,12 @@ class FicheFrais
         return $this->id;
     }
 
-    public function getMois(): ?string
+    public function getMois(): ?\DateTime
     {
         return $this->mois;
     }
 
-    public function setMois(?string $mois): self
+    public function setMois(?\DateTime $mois): self
     {
         $this->mois = $mois;
 

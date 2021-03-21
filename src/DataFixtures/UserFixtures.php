@@ -2,12 +2,15 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\TypeUser;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\User;
+use MongoDB\BSON\Type;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-class UserFixtures extends Fixture
+class UserFixtures extends Fixture implements DependentFixtureInterface
 {
     private $encoder;
 
@@ -30,6 +33,7 @@ class UserFixtures extends Fixture
         $user->setDateEmbauche(new \DateTime("2005-12-21"));
         $user->setRoles(["ROLE_USER"]);
         $user->setTypeUser($this->getReference("visiteur"));
+        $this->addReference('id',$user);
         $manager->persist($user);
 
         $user1 = new User();
@@ -44,6 +48,7 @@ class UserFixtures extends Fixture
         $user1->setDateEmbauche(new \DateTime("2000-05-01"));
         $user1->setRoles(["ROLE_USER"]);
         $user1->setTypeUser($this->getReference("comptable"));
+        $this->addReference('id1',$user1);
         $manager->persist($user1);
 
         $user2 = new User();
@@ -58,8 +63,17 @@ class UserFixtures extends Fixture
         $user2->setDateEmbauche(new \DateTime("2010-05-01"));
         $user2->setRoles(["ROLE_ADMIN"]);
         $user2->setTypeUser($this->getReference("admin"));
+        $this->addReference('id2',$user2);
         $manager->persist($user2);
 
         $manager->flush();
     }
+
+    public function getDependencies()
+    {
+        return array(
+            TypeUserFixtures::class,
+        );
+    }
+
 }
