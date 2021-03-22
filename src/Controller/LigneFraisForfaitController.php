@@ -8,6 +8,7 @@ use App\Form\LigneFraisForfaitType;
 use App\Repository\LigneFraisForfaitRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,15 +19,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class LigneFraisForfaitController extends AbstractController
 {
     /**
-     * @Route("/index/{fiche}", name="ligne_frais_forfait_index", methods={"GET"})
-     *
-     * @ParamConverter("ficheFrais", options={"mapping": {"fiche" : "id"}})
-     *
+     * @Route("/", name="ligne_frais_forfait_index", methods={"GET"})
      */
-    public function index(LigneFraisForfaitRepository $ligneFraisForfaitRepository, FicheFrais $ficheFrais): Response
+    public function index(LigneFraisForfaitRepository $ligneFraisForfaitRepository): Response
     {
         return $this->render('ligne_frais_forfait/index.html.twig', [
-            'ligne_frais_forfaits' => $ligneFraisForfaitRepository->findBy(['fiche'=>$ficheFrais]),
+            'ligne_frais_forfaits' => $ligneFraisForfaitRepository->findAll(),
         ]);
     }
 
@@ -64,11 +62,21 @@ class LigneFraisForfaitController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="ligne_frais_forfait_edit", methods={"GET","POST"})
+     * @Route("/edit/{id}", name="ligne_frais_forfait_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, LigneFraisForfait $ligneFraisForfait): Response
+    public function editAll(Request $request, LigneFraisForfaitRepository $ligneFraisForfaitRepository, FicheFrais $ficheFrais):Response
     {
-        $form = $this->createForm(LigneFraisForfaitType::class, $ligneFraisForfait);
+        $ligneFraisForfait = $ligneFraisForfaitRepository->findAll();
+        $form = $this->createForm(
+            CollectionType::class,
+            $ligneFraisForfait,
+            [
+                'entry_type' => LigneFraisForfaitType::class,
+                'label' => false,
+                'entry_options' => ['label' => false]
+            ]
+        );
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

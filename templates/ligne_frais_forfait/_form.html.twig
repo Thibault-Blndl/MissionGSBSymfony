@@ -1,4 +1,38 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="container">
+        <table class="table">
+            <thead>
+           <tr>
+               <th>Nom</th>
+               <th>Quantité</th>
+               <th>Montant</th>
+           </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ form_row(form[0].fraisForfait.libelle, {'attr':{'class':'form-control'}}) }}</td>
+                <td>{{ form_row(form[0].quantite, {'attr':{'class':'form-control'}}) }}</td>
+                <td>{{ form_row(form[0].fraisForfait.montant, {'attr':{'class':'form-control'}}) }}</td>
+            </tr>
+            <tr>
+                <td>{{ form_row(form[1].fraisForfait.libelle, {'attr':{'class':'form-control'}}) }}</td>
+                <td>{{ form_row(form[1].quantite, {'attr':{'class':'form-control'}}) }}</td>
+                <td>{{ form_row(form[1].fraisForfait.montant, {'attr':{'class':'form-control'}}) }}</td>
+            </tr>
+            <tr>
+                <td>{{ form_row(form[2].fraisForfait.libelle, {'attr':{'class':'form-control'}}) }}</td>
+                <td>{{ form_row(form[2].quantite, {'attr':{'class':'form-control'}}) }}</td>
+                <td>{{ form_row(form[2].fraisForfait.montant, {'attr':{'class':'form-control'}}) }}</td>
+            </tr>
+            <tr>
+                <td>{{ form_row(form[3].fraisForfait.libelle, {'attr':{'class':'form-control'}}) }}</td>
+                <td>{{ form_row(form[3].quantite, {'attr':{'class':'form-control'}}) }}</td>
+                <td>{{ form_row(form[3].fraisForfait.montant, {'attr':{'class':'form-control'}}) }}</td>
+            </tr>
+
+
+            </tbody>
+        </table>
+    </div>
 {{ form_end(form) }}
+

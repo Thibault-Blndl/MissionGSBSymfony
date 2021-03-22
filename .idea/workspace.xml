@@ -11,29 +11,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b198c5af-7d25-4c44-8ab1-915f60f63622" name="Default Changelist" comment="Ajout partie graphique accueil">
-      <change afterPath="$PROJECT_DIR$/src/Controller/FicheFraisController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/LigneFraisForfaitController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/FicheFraisFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/FicheFraisType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/LigneFraisForfaitType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/fiche_frais/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/fiche_frais/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/fiche_frais/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/fiche_frais/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/fiche_frais/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/fiche_frais/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/FraisForfaitController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/FraisForfaitFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/LigneFraisForfaitFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/FraisForfaitType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/EtatFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/EtatFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Etat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Etat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LigneFraisForfaitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LigneFraisForfaitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/FicheFraisFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/FicheFraisFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/FicheFrais.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FicheFrais.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FraisForfait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FraisForfait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/LigneFraisForfait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/LigneFraisForfait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/LigneFraisForfaitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/LigneFraisForfaitType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fiche_frais/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fiche_frais/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/edit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +212,7 @@
       <workItem from="1616232290300" duration="6217000" />
       <workItem from="1616254488483" duration="12930000" />
       <workItem from="1616273220765" duration="18882000" />
-      <workItem from="1616322565296" duration="17075000" />
+      <workItem from="1616322565296" duration="33652000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout partie graphique accueil">
       <created>1616240231786</created>
@@ -255,14 +253,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="461" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1616192799062" />
-    <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1616349818464">
+    <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1616440880770">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1616349818464" />
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616346109958">
+    <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1616440880770" />
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616445343659">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1616346109958" />
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1616445343659" />
     <state x="557" y="351" key="Github.ShareDialog" timestamp="1616179415366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -283,10 +281,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="627" y="25" width="680" height="638" key="dock-window-1/0.0.1440.900@0.0.1440.900" timestamp="1616347098313" />
-    <state x="421" y="82" width="707" height="735" key="find.popup" timestamp="1616260175665">
+    <state x="421" y="82" width="707" height="735" key="find.popup" timestamp="1616438187048">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="421" y="82" width="707" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1616260175665" />
+    <state x="421" y="82" width="707" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1616438187047" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1616290312634">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

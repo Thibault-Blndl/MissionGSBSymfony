@@ -49,7 +49,7 @@
                         <td>{{ fiche_frai.motifRefus }}</td>
                         <td>
                         <td>
-                            <a class="btn btn-outline-danger" href="{{ path('ligne_frais_forfait_index', {'fiche': fiche_frai.id}) }}">Frais Forfait</a></td>
+                            <a class="btn btn-outline-danger" href="{{ path('ligne_frais_forfait_edit', {'id': fiche_frai.id}) }}">Frais Forfait</a></td>
                         </td>
                     </tr>
                 {% else %}
