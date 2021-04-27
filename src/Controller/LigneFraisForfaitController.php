@@ -64,12 +64,16 @@ class LigneFraisForfaitController extends AbstractController
     /**
      * @Route("/edit/{id}", name="ligne_frais_forfait_edit", methods={"GET","POST"})
      */
-    public function editAll(Request $request, LigneFraisForfaitRepository $ligneFraisForfaitRepository, FicheFrais $ficheFrais):Response
+    public function editAll(
+        Request $request,
+        LigneFraisForfaitRepository $ligneFraisForfaitRepository,
+        FicheFrais $ficheFrais
+    ):Response
     {
-        $ligneFraisForfait = $ligneFraisForfaitRepository->findAll();
+        $lignesFraisForfait = $ligneFraisForfaitRepository->findBy(['fiche' => $ficheFrais]);
         $form = $this->createForm(
             CollectionType::class,
-            $ligneFraisForfait,
+            $lignesFraisForfait,
             [
                 'entry_type' => LigneFraisForfaitType::class,
                 'label' => false,
@@ -80,13 +84,14 @@ class LigneFraisForfaitController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $ficheFrais->setDateModif(new \DateTime());
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('ligne_frais_forfait_index');
         }
 
         return $this->render('ligne_frais_forfait/edit.html.twig', [
-            'ligne_frais_forfait' => $ligneFraisForfait,
+            'ligne_frais_forfait' => $lignesFraisForfait,
             'form' => $form->createView(),
         ]);
     }

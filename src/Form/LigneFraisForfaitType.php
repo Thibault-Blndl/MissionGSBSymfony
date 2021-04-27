@@ -13,10 +13,8 @@ class LigneFraisForfaitType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-
             ->add('fraisForfait', FraisForfaitType::class, ['label' => false])
             ->add('quantite', NumberType::class, ['label' => false])
-           // ->add('fiche')
         ;
     }
 

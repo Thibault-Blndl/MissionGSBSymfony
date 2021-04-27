@@ -30,7 +30,7 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         $user->setAdresse("8 rue des Charmes");
         $user->setCodePostal("46000");
         $user->setVille("Cahors");
-        $user->setDateEmbauche(new \DateTime("2005-12-21"));
+        $user->setDateEmbauche(new \DateTime("2020-12-21"));
         $user->setRoles(["ROLE_USER"]);
         $user->setTypeUser($this->getReference("visiteur"));
         $this->addReference('id',$user);
@@ -45,7 +45,7 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         $user1->setAdresse("22 rue des Ternes");
         $user1->setCodePostal("46123");
         $user1->setVille("Gramat");
-        $user1->setDateEmbauche(new \DateTime("2000-05-01"));
+        $user1->setDateEmbauche(new \DateTime("2017-05-01"));
         $user1->setRoles(["ROLE_USER"]);
         $user1->setTypeUser($this->getReference("comptable"));
         $this->addReference('id1',$user1);
@@ -60,11 +60,26 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         $user2->setAdresse("1 Avenue Charles de Gaulle");
         $user2->setCodePostal("62217");
         $user2->setVille("Tilloy-les-Mofflaines");
-        $user2->setDateEmbauche(new \DateTime("2010-05-01"));
+        $user2->setDateEmbauche(new \DateTime("2018-05-01"));
         $user2->setRoles(["ROLE_ADMIN"]);
         $user2->setTypeUser($this->getReference("admin"));
         $this->addReference('id2',$user2);
         $manager->persist($user2);
+
+        $user3 = new User();
+        $user3->setNom("AAA");
+        $user3->setPrenom("AAA");
+        $user3->setUsername("AAA");
+        $encoded = $this->encoder->encodePassword($user3,"AAA");
+        $user3->setPassword($encoded);
+        $user3->setAdresse("AAA");
+        $user3->setCodePostal("AAA");
+        $user3->setVille("AAA");
+        $user3->setDateEmbauche(new \DateTime("2019-12-21"));
+        $user3->setRoles(["ROLE_USER"]);
+        $user3->setTypeUser($this->getReference("visiteur"));
+        $this->addReference('id3',$user3);
+        $manager->persist($user3);
 
         $manager->flush();
     }

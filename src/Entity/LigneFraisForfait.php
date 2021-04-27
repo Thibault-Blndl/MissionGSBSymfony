@@ -18,7 +18,7 @@ class LigneFraisForfait
     private $id;
 
     /**
-     * @ORM\OneToOne(targetEntity=FraisForfait::class, inversedBy="ligneFraisForfait", cascade={"persist", "remove"})
+     * @ORM\ManyToOne(targetEntity=FraisForfait::class, inversedBy="ligneFraisForfait")
      */
     private $fraisForfait;
 

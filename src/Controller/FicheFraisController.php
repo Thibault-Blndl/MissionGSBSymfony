@@ -3,8 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\FicheFrais;
+use App\Entity\LigneFraisForfait;
 use App\Form\FicheFraisType;
 use App\Repository\FicheFraisRepository;
+use App\Repository\FraisForfaitRepository;
+use App\Repository\LigneFraisForfaitRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -21,13 +24,39 @@ class FicheFraisController extends AbstractController
     /**
      * @Route("/", name="fiche_frais_index", methods={"GET"})
      */
-    public function index(FicheFraisRepository $ficheFraisRepository, TokenStorageInterface $tokenStorage): Response
+    public function index(
+        FicheFraisRepository $ficheFraisRepository,
+        TokenStorageInterface $tokenStorage,
+        LigneFraisForfaitRepository $ligneFraisForfaitRepository,
+        FraisForfaitRepository $fraisForfaitRepository
+    ): Response
     {
+        $ficheFrais = $ficheFraisRepository->findBy(['user' => $tokenStorage->getToken()->getUser()], ['mois' => 'DESC']);
+        $lignesFraisForfaitFichesUser = [];
+
+        foreach($ficheFrais as $fiche)
+        {
+            array_push($lignesFraisForfaitFichesUser, $ligneFraisForfaitRepository->findBy(['fiche' => $fiche]));
+        }
+
+        foreach($lignesFraisForfaitFichesUser as $lignesFraisForfaitFiche)
+        {
+            $montantTotalLigne = 0;
+
+            foreach ($lignesFraisForfaitFiche as $ligneFraisForfait) {
+                $quantite = $ligneFraisForfait->getQuantite();
+                $montant = $ligneFraisForfait->getFraisForfait()->getMontant();
+                $montantTotalLigne += $quantite * $montant;
+            }
+
+            $lignesFraisForfaitFiche[0]->getFiche()->setMontantValide($montantTotalLigne);
+        }
+
         return $this->render('fiche_frais/index.html.twig', [
 
-            'fiche_frais' => $ficheFraisRepository->findBy(['user'=> $tokenStorage->getToken()->getUser()]),
+            'fiche_frais' => $ficheFrais,
             'fiche_frais_admin' => $ficheFraisRepository->findAll(),
-
+            'montant'=> $montant,
         ]);
     }
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -7,26 +10,35 @@
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b198c5af-7d25-4c44-8ab1-915f60f63622" name="Default Changelist" comment="Ajout partie graphique accueil">
-      <change afterPath="$PROJECT_DIR$/src/Controller/FraisForfaitController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/FraisForfaitFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/LigneFraisForfaitFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/FraisForfaitType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/frais_forfait/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/LigneFraisHorsForfaitController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/LigneFraisHorsForfaitFixtures.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/LigneFraisHorsForfaitType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FicheFraisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FicheFraisController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LigneFraisForfaitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LigneFraisForfaitController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/FicheFraisFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/FicheFraisFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/FicheFrais.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FicheFrais.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/LigneFraisForfaitFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/LigneFraisForfaitFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Etat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Etat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/FraisForfait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FraisForfait.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/LigneFraisForfait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/LigneFraisForfait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/LigneFraisHorsForfait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/LigneFraisHorsForfait.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/LigneFraisForfaitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/LigneFraisForfaitType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/fiche_frais/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fiche_frais/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/_delete_form.html.twig" afterDir="false" />
@@ -50,6 +62,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -188,16 +205,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets" />
+      <recent name="$PROJECT_DIR$/src/DataFixtures" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/DataFixtures" />
       <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/public/img" />
       <recent name="$PROJECT_DIR$/src/Repository" />
       <recent name="$PROJECT_DIR$/templates/accueil" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets" />
-      <recent name="$PROJECT_DIR$/src/DataFixtures" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -212,7 +229,13 @@
       <workItem from="1616232290300" duration="6217000" />
       <workItem from="1616254488483" duration="12930000" />
       <workItem from="1616273220765" duration="18882000" />
-      <workItem from="1616322565296" duration="33652000" />
+      <workItem from="1616322565296" duration="34888000" />
+      <workItem from="1616582516549" duration="159000" />
+      <workItem from="1616746153510" duration="582000" />
+      <workItem from="1616750058225" duration="1972000" />
+      <workItem from="1616781554500" duration="233000" />
+      <workItem from="1617629154936" duration="9866000" />
+      <workItem from="1619547713465" duration="15092000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout partie graphique accueil">
       <created>1616240231786</created>
@@ -232,7 +255,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -253,14 +288,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="461" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1616192799062" />
-    <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1616440880770">
+    <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1619555192482">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1616440880770" />
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616445343659">
+    <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1619555192482" />
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619564170159">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1616445343659" />
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1619564170159" />
     <state x="557" y="351" key="Github.ShareDialog" timestamp="1616179415366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -269,10 +304,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1616272946852" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1616291937827">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1619554332977">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1616291937827" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1619554332977" />
     <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1616240240311">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -281,13 +316,17 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="627" y="25" width="680" height="638" key="dock-window-1/0.0.1440.900@0.0.1440.900" timestamp="1616347098313" />
-    <state x="421" y="82" width="707" height="735" key="find.popup" timestamp="1616438187048">
+    <state x="421" y="82" width="714" height="735" key="find.popup" timestamp="1619562201167">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="421" y="82" width="707" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1616438187047" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1616290312634">
+    <state x="421" y="82" width="714" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1619562201167" />
+    <state x="385" y="210" key="run.anything.popup" timestamp="1619557897734">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1616290312634" />
+    <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1619557897734" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1619565738993">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1619565738993" />
   </component>
 </project>

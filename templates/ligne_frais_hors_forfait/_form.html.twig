@@ -1,0 +1,25 @@
+{{ form_start(form) }}
+    <div class="container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Libelle</th>
+                <th>Jour</th>
+                <th>Montant</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in 0..form|length-2 %}
+                <tr>
+                    <td>{{ form_row(form[i].libelle, {'attr':{'class':'form-control'}}) }}</td>
+                    <td>{{ form_row(form[i].date, {'date_pattern': '<span style="display: none;">{{ year }} {{ month }}</span> {{ day }}'}) }}</td>
+                    <td>{{ form_row(form[i].montant, {'attr':{'class':'form-control'}}) }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{#    {{ form_widget(form) }}#}
+    <button class="btn btn-outline-danger">{{ button_label|default('Modifier') }}</button>
+
+{{ form_end(form) }}

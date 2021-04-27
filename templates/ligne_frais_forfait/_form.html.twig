@@ -2,37 +2,25 @@
     <div class="container">
         <table class="table">
             <thead>
-           <tr>
-               <th>Nom</th>
-               <th>Quantité</th>
-               <th>Montant</th>
-           </tr>
+                <tr>
+                   <th>Nom</th>
+                   <th>Quantité</th>
+                   <th>Montant</th>
+                </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>{{ form_row(form[0].fraisForfait.libelle, {'attr':{'class':'form-control'}}) }}</td>
-                <td>{{ form_row(form[0].quantite, {'attr':{'class':'form-control'}}) }}</td>
-                <td>{{ form_row(form[0].fraisForfait.montant, {'attr':{'class':'form-control'}}) }}</td>
-            </tr>
-            <tr>
-                <td>{{ form_row(form[1].fraisForfait.libelle, {'attr':{'class':'form-control'}}) }}</td>
-                <td>{{ form_row(form[1].quantite, {'attr':{'class':'form-control'}}) }}</td>
-                <td>{{ form_row(form[1].fraisForfait.montant, {'attr':{'class':'form-control'}}) }}</td>
-            </tr>
-            <tr>
-                <td>{{ form_row(form[2].fraisForfait.libelle, {'attr':{'class':'form-control'}}) }}</td>
-                <td>{{ form_row(form[2].quantite, {'attr':{'class':'form-control'}}) }}</td>
-                <td>{{ form_row(form[2].fraisForfait.montant, {'attr':{'class':'form-control'}}) }}</td>
-            </tr>
-            <tr>
-                <td>{{ form_row(form[3].fraisForfait.libelle, {'attr':{'class':'form-control'}}) }}</td>
-                <td>{{ form_row(form[3].quantite, {'attr':{'class':'form-control'}}) }}</td>
-                <td>{{ form_row(form[3].fraisForfait.montant, {'attr':{'class':'form-control'}}) }}</td>
-            </tr>
-
+            {% for i in 0..3 %}
+                <tr>
+                    <td>{{ form_row(form[i].fraisForfait.libelle, {'attr':{'class':'form-control'}}) }}</td>
+                    <td>{{ form_row(form[i].quantite, {'attr':{'class':'form-control'}}) }}</td>
+                    <td>{{ form_row(form[i].fraisForfait.montant, {'attr':{'class':'form-control'}}) }}</td>
+                </tr>
+            {% endfor %}
 
             </tbody>
         </table>
+
+        <button class="btn btn-outline-danger">{{ button_label|default('Modifier') }}</button>
     </div>
 {{ form_end(form) }}
 

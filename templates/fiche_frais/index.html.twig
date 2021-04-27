@@ -9,20 +9,17 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Mois</th>
-                    <th>NbJustificatifs</th>
-                    <th>MontantValide</th>
-                    <th>DateModif</th>
-                    <th>MotifRefus</th>
-                    <th>actions</th>
+                    <th>État</th>
+                    <th>Montant</th>
+                    <th>Date modif</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
             {% if is_granted('ROLE_ADMIN') %}
                 {% for fiche_frai in fiche_frais_admin %}
                     <tr>
-                        <td>{{ fiche_frai.id }}</td>
                         <td>{{ fiche_frai.mois|date('m-Y') }}</td>
                         <td>{{ fiche_frai.nbJustificatifs }}</td>
                         <td>{{ fiche_frai.montantValide }}</td>
@@ -41,15 +38,15 @@
             {% else %}
                 {% for fiche_frai in fiche_frais %}
                     <tr>
-                        <td>{{ fiche_frai.id }}</td>
                         <td>{{ fiche_frai.mois|date('m-Y') }}</td>
-                        <td>{{ fiche_frai.nbJustificatifs }}</td>
+                        <td>{{ fiche_frai.etat }}</td>
                         <td>{{ fiche_frai.montantValide }}</td>
                         <td>{{ fiche_frai.dateModif ? fiche_frai.dateModif|date('Y-m-d') : '' }}</td>
-                        <td>{{ fiche_frai.motifRefus }}</td>
                         <td>
+                            <a class="btn btn-outline-danger" href="{{ path('ligne_frais_forfait_edit', {'id': fiche_frai.id}) }}">Frais Forfait</a>
+                        </td>
                         <td>
-                            <a class="btn btn-outline-danger" href="{{ path('ligne_frais_forfait_edit', {'id': fiche_frai.id}) }}">Frais Forfait</a></td>
+                            <a class="btn btn-outline-danger" href="{{ path('ligne_frais_hors_forfait_edit', {'id': fiche_frai.id}) }}">Frais Hors Forfait</a></td>
                         </td>
                     </tr>
                 {% else %}

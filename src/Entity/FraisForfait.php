@@ -28,7 +28,7 @@ class FraisForfait
     private $montant;
 
     /**
-     * @ORM\OneToOne(targetEntity=LigneFraisForfait::class, mappedBy="fraisForfait", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity=LigneFraisForfait::class, mappedBy="fraisForfait")
      */
     private $ligneFraisForfait;
 
