@@ -20,11 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b198c5af-7d25-4c44-8ab1-915f60f63622" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/ligne_frais/_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FicheFraisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FicheFraisController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LigneFraisHorsForfaitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LigneFraisHorsForfaitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/FicheFraisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FicheFraisType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/FraisForfaitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FraisForfaitType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FraisForfaitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FraisForfaitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LigneFraisForfaitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LigneFraisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LigneFraisHorsForfaitController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/LigneFraisForfaitFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/LigneFraisForfaitFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/LigneFraisForfaitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/LigneFraisForfaitType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/LigneFraisHorsForfaitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/LigneFraisHorsForfaitType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/fiche_frais/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/fiche_frais/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ligne_frais/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ligne_frais/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ligne_frais/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/show.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +232,7 @@
       <workItem from="1616750058225" duration="1972000" />
       <workItem from="1616781554500" duration="233000" />
       <workItem from="1617629154936" duration="9866000" />
-      <workItem from="1619547713465" duration="23750000" />
+      <workItem from="1619547713465" duration="31406000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout partie graphique accueil">
       <created>1616240231786</created>
@@ -246,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619630543494</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="WIP : Création de fiches">
+      <created>1619632221739</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619632221739</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +305,8 @@
     <MESSAGE value="Fix calcul montant + ajout hors forfait" />
     <MESSAGE value="Calcul montant frais forfait + frais hors forfait et push en BDD, mise au propre fixtures" />
     <MESSAGE value="Gérer les accès authentifié / non authentifié (injections URL), fix quand pas de ligne forfait / hors forfait" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gérer les accès authentifié / non authentifié (injections URL), fix quand pas de ligne forfait / hors forfait" />
+    <MESSAGE value="WIP : Création de fiches" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP : Création de fiches" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616181071886">
@@ -297,14 +321,18 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1619555192482" />
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619630984971">
+    <state x="65" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1619644986955">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1619630984971" />
-    <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2" timestamp="1619630543362">
+    <state x="65" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1619644986955" />
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619633534022">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1619630543362" />
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1619633534022" />
+    <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2" timestamp="1619632221617">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1619632221617" />
     <state x="557" y="351" key="Github.ShareDialog" timestamp="1616179415366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -317,10 +345,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1619554332977" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1619630544772">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1619632224100">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1619630544772" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1619632224100" />
     <state x="627" y="25" width="680" height="638" key="dock-window-1" timestamp="1616347098313">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -333,9 +361,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1619557897734" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1619631474318">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1619644637176">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1619631474318" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1619644637176" />
   </component>
 </project>

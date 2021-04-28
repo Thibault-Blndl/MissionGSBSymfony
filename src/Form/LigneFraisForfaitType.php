@@ -22,6 +22,7 @@ class LigneFraisForfaitType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => LigneFraisForfait::class,
+            'allow_extra_fields' => true
         ]);
     }
 }

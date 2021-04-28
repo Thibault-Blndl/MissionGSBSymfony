@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}FicheFrais index{% endblock %}
+{% block title %}Mes fiches de frais{% endblock %}
 
 {% block body %}
     <div class="pt-5">
-        <h1 class="pt-5">Liste Fiches Frais</h1>
+        <h1 class="pt-5">Mes fiches de frais</h1>
 
         <table class="table">
             <thead>
@@ -13,7 +13,6 @@
                     <th>État</th>
                     <th>Montant</th>
                     <th>Date modif</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,10 +42,7 @@
                         <td>{{ fiche_frai.montantValide }}</td>
                         <td>{{ fiche_frai.dateModif ? fiche_frai.dateModif|date('Y-m-d') : '' }}</td>
                         <td>
-                            <a class="btn btn-outline-danger" href="{{ path('ligne_frais_forfait_edit', {'id': fiche_frai.id}) }}">Frais Forfait</a>
-                        </td>
-                        <td>
-                            <a class="btn btn-outline-danger" href="{{ path('ligne_frais_hors_forfait_edit', {'id': fiche_frai.id}) }}">Frais Hors Forfait</a></td>
+                            <a class="btn btn-outline-danger" href="{{ path('ligne_frais_edit', {'id': fiche_frai.id}) }}">Modifier</a>
                         </td>
                     </tr>
                 {% else %}

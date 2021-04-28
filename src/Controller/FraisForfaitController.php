@@ -107,8 +107,8 @@ class FraisForfaitController extends AbstractController
             return $this->redirectToRoute('ligne_frais_forfait_index');
         }
 
-        return $this->render('ligne_frais_forfait/edit.html.twig', [
-            'ligne_frais_forfait' => $ligneFraisForfait,
+        return $this->render('ligne_frais/edit.html.twig', [
+            'ligne_frais' => $ligneFraisForfait,
             'form' => $form->createView(),
         ]);
     }

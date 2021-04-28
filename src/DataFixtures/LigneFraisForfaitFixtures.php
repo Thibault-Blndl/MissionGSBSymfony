@@ -12,77 +12,101 @@ class LigneFraisForfaitFixtures extends Fixture implements DependentFixtureInter
 {
     public function load(ObjectManager $manager)
     {
-        $lignefraisforfait = new LigneFraisForfait();
-        $lignefraisforfait->setFiche($this->getReference('fiche'));
-        $lignefraisforfait->setFraisForfait($this->getReference('fraisforfait'));
-        $lignefraisforfait->setQuantite(0);
-        $manager->persist($lignefraisforfait);
+        $lignefraisforfaitF1 = new LigneFraisForfait();
+        $lignefraisforfaitF1->setFiche($this->getReference('fiche'));
+        $lignefraisforfaitF1->setFraisForfait($this->getReference('fraisforfait'));
+        $lignefraisforfaitF1->setQuantite(0);
+        $manager->persist($lignefraisforfaitF1);
 
-        $lignefraisforfait2 = new LigneFraisForfait();
-        $lignefraisforfait2->setFiche($this->getReference('fiche'));
-        $lignefraisforfait2->setFraisForfait($this->getReference('fraisforfait2'));
-        $lignefraisforfait2->setQuantite(0);
-        $manager->persist($lignefraisforfait2);
+        $lignefraisforfait2F1 = new LigneFraisForfait();
+        $lignefraisforfait2F1->setFiche($this->getReference('fiche'));
+        $lignefraisforfait2F1->setFraisForfait($this->getReference('fraisforfait2'));
+        $lignefraisforfait2F1->setQuantite(0);
+        $manager->persist($lignefraisforfait2F1);
 
-        $lignefraisforfait3 = new LigneFraisForfait();
-        $lignefraisforfait3->setFiche($this->getReference('fiche'));
-        $lignefraisforfait3->setFraisForfait($this->getReference('fraisforfait3'));
-        $lignefraisforfait3->setQuantite(0);
-        $manager->persist($lignefraisforfait3);
+        $lignefraisforfait3F1 = new LigneFraisForfait();
+        $lignefraisforfait3F1->setFiche($this->getReference('fiche'));
+        $lignefraisforfait3F1->setFraisForfait($this->getReference('fraisforfait3'));
+        $lignefraisforfait3F1->setQuantite(0);
+        $manager->persist($lignefraisforfait3F1);
 
-        $lignefraisforfait4 = new LigneFraisForfait();
-        $lignefraisforfait4->setFiche($this->getReference('fiche'));
-        $lignefraisforfait4->setFraisForfait($this->getReference('fraisforfait4'));
-        $lignefraisforfait4->setQuantite(0);
-        $manager->persist($lignefraisforfait4);
+        $lignefraisforfait4F1 = new LigneFraisForfait();
+        $lignefraisforfait4F1->setFiche($this->getReference('fiche'));
+        $lignefraisforfait4F1->setFraisForfait($this->getReference('fraisforfait4'));
+        $lignefraisforfait4F1->setQuantite(0);
+        $manager->persist($lignefraisforfait4F1);
 
-        $lignefraisforfait5 = new LigneFraisForfait();
-        $lignefraisforfait5->setFiche($this->getReference('fiche3'));
-        $lignefraisforfait5->setFraisForfait($this->getReference('fraisforfait'));
-        $lignefraisforfait5->setQuantite(0);
-        $manager->persist($lignefraisforfait5);
+        $lignefraisforfait1F2 = new LigneFraisForfait();
+        $lignefraisforfait1F2->setFiche($this->getReference('fiche2'));
+        $lignefraisforfait1F2->setFraisForfait($this->getReference('fraisforfait'));
+        $lignefraisforfait1F2->setQuantite(0);
+        $manager->persist($lignefraisforfait1F2);
 
-        $lignefraisforfait6 = new LigneFraisForfait();
-        $lignefraisforfait6->setFiche($this->getReference('fiche3'));
-        $lignefraisforfait6->setFraisForfait($this->getReference('fraisforfait2'));
-        $lignefraisforfait6->setQuantite(0);
-        $manager->persist($lignefraisforfait6);
+        $lignefraisforfait2F2 = new LigneFraisForfait();
+        $lignefraisforfait2F2->setFiche($this->getReference('fiche2'));
+        $lignefraisforfait2F2->setFraisForfait($this->getReference('fraisforfait2'));
+        $lignefraisforfait2F2->setQuantite(0);
+        $manager->persist($lignefraisforfait2F2);
 
-        $lignefraisforfait7 = new LigneFraisForfait();
-        $lignefraisforfait7->setFiche($this->getReference('fiche3'));
-        $lignefraisforfait7->setFraisForfait($this->getReference('fraisforfait3'));
-        $lignefraisforfait7->setQuantite(0);
-        $manager->persist($lignefraisforfait7);
+        $lignefraisforfait3F2 = new LigneFraisForfait();
+        $lignefraisforfait3F2->setFiche($this->getReference('fiche2'));
+        $lignefraisforfait3F2->setFraisForfait($this->getReference('fraisforfait3'));
+        $lignefraisforfait3F2->setQuantite(0);
+        $manager->persist($lignefraisforfait3F2);
 
-        $lignefraisforfait8 = new LigneFraisForfait();
-        $lignefraisforfait8->setFiche($this->getReference('fiche3'));
-        $lignefraisforfait8->setFraisForfait($this->getReference('fraisforfait4'));
-        $lignefraisforfait8->setQuantite(0);
-        $manager->persist($lignefraisforfait8);
+        $lignefraisforfait4F2 = new LigneFraisForfait();
+        $lignefraisforfait4F2->setFiche($this->getReference('fiche2'));
+        $lignefraisforfait4F2->setFraisForfait($this->getReference('fraisforfait4'));
+        $lignefraisforfait4F2->setQuantite(0);
+        $manager->persist($lignefraisforfait4F2);
 
-        $lignefraisforfait9 = new LigneFraisForfait();
-        $lignefraisforfait9->setFiche($this->getReference('fiche4'));
-        $lignefraisforfait9->setFraisForfait($this->getReference('fraisforfait'));
-        $lignefraisforfait9->setQuantite(0);
-        $manager->persist($lignefraisforfait9);
+        $lignefraisforfait1F3 = new LigneFraisForfait();
+        $lignefraisforfait1F3->setFiche($this->getReference('fiche3'));
+        $lignefraisforfait1F3->setFraisForfait($this->getReference('fraisforfait'));
+        $lignefraisforfait1F3->setQuantite(0);
+        $manager->persist($lignefraisforfait1F3);
 
-        $lignefraisforfait10 = new LigneFraisForfait();
-        $lignefraisforfait10->setFiche($this->getReference('fiche4'));
-        $lignefraisforfait10->setFraisForfait($this->getReference('fraisforfait2'));
-        $lignefraisforfait10->setQuantite(0);
-        $manager->persist($lignefraisforfait10);
+        $lignefraisforfait2F3 = new LigneFraisForfait();
+        $lignefraisforfait2F3->setFiche($this->getReference('fiche3'));
+        $lignefraisforfait2F3->setFraisForfait($this->getReference('fraisforfait2'));
+        $lignefraisforfait2F3->setQuantite(0);
+        $manager->persist($lignefraisforfait2F3);
 
-        $lignefraisforfait11 = new LigneFraisForfait();
-        $lignefraisforfait11->setFiche($this->getReference('fiche4'));
-        $lignefraisforfait11->setFraisForfait($this->getReference('fraisforfait3'));
-        $lignefraisforfait11->setQuantite(0);
-        $manager->persist($lignefraisforfait11);
+        $lignefraisforfait3F3 = new LigneFraisForfait();
+        $lignefraisforfait3F3->setFiche($this->getReference('fiche3'));
+        $lignefraisforfait3F3->setFraisForfait($this->getReference('fraisforfait3'));
+        $lignefraisforfait3F3->setQuantite(0);
+        $manager->persist($lignefraisforfait3F3);
 
-        $lignefraisforfait12 = new LigneFraisForfait();
-        $lignefraisforfait12->setFiche($this->getReference('fiche4'));
-        $lignefraisforfait12->setFraisForfait($this->getReference('fraisforfait4'));
-        $lignefraisforfait12->setQuantite(0);
-        $manager->persist($lignefraisforfait12);
+        $lignefraisforfait4F3 = new LigneFraisForfait();
+        $lignefraisforfait4F3->setFiche($this->getReference('fiche3'));
+        $lignefraisforfait4F3->setFraisForfait($this->getReference('fraisforfait4'));
+        $lignefraisforfait4F3->setQuantite(0);
+        $manager->persist($lignefraisforfait4F3);
+
+        $lignefraisforfait1F4 = new LigneFraisForfait();
+        $lignefraisforfait1F4->setFiche($this->getReference('fiche4'));
+        $lignefraisforfait1F4->setFraisForfait($this->getReference('fraisforfait'));
+        $lignefraisforfait1F4->setQuantite(0);
+        $manager->persist($lignefraisforfait1F4);
+
+        $lignefraisforfait2F4 = new LigneFraisForfait();
+        $lignefraisforfait2F4->setFiche($this->getReference('fiche4'));
+        $lignefraisforfait2F4->setFraisForfait($this->getReference('fraisforfait2'));
+        $lignefraisforfait2F4->setQuantite(0);
+        $manager->persist($lignefraisforfait2F4);
+
+        $lignefraisforfait3F4 = new LigneFraisForfait();
+        $lignefraisforfait3F4->setFiche($this->getReference('fiche4'));
+        $lignefraisforfait3F4->setFraisForfait($this->getReference('fraisforfait3'));
+        $lignefraisforfait3F4->setQuantite(0);
+        $manager->persist($lignefraisforfait3F4);
+
+        $lignefraisforfait4F4 = new LigneFraisForfait();
+        $lignefraisforfait4F4->setFiche($this->getReference('fiche4'));
+        $lignefraisforfait4F4->setFraisForfait($this->getReference('fraisforfait4'));
+        $lignefraisforfait4F4->setQuantite(0);
+        $manager->persist($lignefraisforfait4F4);
 
         $manager->flush();
     }
