@@ -5,8 +5,8 @@ namespace App\Controller;
 use App\Entity\FicheFrais;
 use App\Entity\LigneFraisHorsForfait;
 use App\Form\LigneFraisHorsForfaitType;
-use App\Repository\FicheFraisRepository;
 use App\Repository\LigneFraisHorsForfaitRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,6 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/lignefraishorsforfait")
+ * @IsGranted("ROLE_USER")
  */
 class LigneFraisHorsForfaitController extends AbstractController
 {
@@ -70,8 +71,6 @@ class LigneFraisHorsForfaitController extends AbstractController
         FicheFrais $ficheFrais
     ): Response
     {
-
-
         $lignesFraisHorsForfait = $ligneFraisHorsForfaitRepository->findBy(['fiche' => $ficheFrais]);
 
         foreach ($lignesFraisHorsForfait as $ligneFraisHorsForfait)
@@ -89,14 +88,12 @@ class LigneFraisHorsForfaitController extends AbstractController
             ]
         );
 
-        //$form = $this->createForm(LigneFraisHorsForfaitType::class, $ligneFraisHorsForfait);
-
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('ligne_frais_hors_forfait_index');
+            return $this->redirectToRoute('fiche_frais_index');
         }
 
         return $this->render('ligne_frais_hors_forfait/edit.html.twig', [

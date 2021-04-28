@@ -6,7 +6,7 @@ use App\Entity\FicheFrais;
 use App\Entity\LigneFraisForfait;
 use App\Form\LigneFraisForfaitType;
 use App\Repository\LigneFraisForfaitRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,6 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/lignefraisforfait")
+ * @IsGranted("ROLE_USER")
  */
 class LigneFraisForfaitController extends AbstractController
 {
@@ -87,7 +88,7 @@ class LigneFraisForfaitController extends AbstractController
             $ficheFrais->setDateModif(new \DateTime());
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('ligne_frais_forfait_index');
+            return $this->redirectToRoute('fiche_frais_index');
         }
 
         return $this->render('ligne_frais_forfait/edit.html.twig', [

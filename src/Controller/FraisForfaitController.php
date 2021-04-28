@@ -8,6 +8,7 @@ use App\Form\FraisForfaitType;
 use App\Form\LigneFraisForfaitType;
 use App\Repository\FraisForfaitRepository;
 use App\Repository\LigneFraisForfaitRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,6 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/frais/forfait")
+ * @IsGranted("ROLE_USER")
  */
 class FraisForfaitController extends AbstractController
 {
