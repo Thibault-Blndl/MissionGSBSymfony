@@ -33,7 +33,7 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         $user->setDateEmbauche(new \DateTime("2020-12-21"));
         $user->setRoles(["ROLE_USER"]);
         $user->setTypeUser($this->getReference("visiteur"));
-        $this->addReference('id',$user);
+        $this->addReference('user',$user);
         $manager->persist($user);
 
         $user1 = new User();
@@ -48,7 +48,7 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         $user1->setDateEmbauche(new \DateTime("2017-05-01"));
         $user1->setRoles(["ROLE_USER"]);
         $user1->setTypeUser($this->getReference("comptable"));
-        $this->addReference('id1',$user1);
+        $this->addReference('user1',$user1);
         $manager->persist($user1);
 
         $user2 = new User();
@@ -63,7 +63,7 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         $user2->setDateEmbauche(new \DateTime("2018-05-01"));
         $user2->setRoles(["ROLE_ADMIN"]);
         $user2->setTypeUser($this->getReference("admin"));
-        $this->addReference('id2',$user2);
+        $this->addReference('user2',$user2);
         $manager->persist($user2);
 
         $user3 = new User();
@@ -78,7 +78,7 @@ class UserFixtures extends Fixture implements DependentFixtureInterface
         $user3->setDateEmbauche(new \DateTime("2019-12-21"));
         $user3->setRoles(["ROLE_USER"]);
         $user3->setTypeUser($this->getReference("visiteur"));
-        $this->addReference('id3',$user3);
+        $this->addReference('user3',$user3);
         $manager->persist($user3);
 
         $manager->flush();

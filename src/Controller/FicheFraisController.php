@@ -4,10 +4,14 @@ namespace App\Controller;
 
 use App\Entity\FicheFrais;
 use App\Entity\LigneFraisForfait;
+use App\Entity\LigneFraisHorsForfait;
 use App\Form\FicheFraisType;
 use App\Repository\FicheFraisRepository;
 use App\Repository\FraisForfaitRepository;
 use App\Repository\LigneFraisForfaitRepository;
+use App\Repository\LigneFraisHorsForfaitRepository;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,36 +31,39 @@ class FicheFraisController extends AbstractController
     public function index(
         FicheFraisRepository $ficheFraisRepository,
         TokenStorageInterface $tokenStorage,
-        LigneFraisForfaitRepository $ligneFraisForfaitRepository,
-        FraisForfaitRepository $fraisForfaitRepository
+        EntityManagerInterface $em
     ): Response
     {
         $ficheFrais = $ficheFraisRepository->findBy(['user' => $tokenStorage->getToken()->getUser()], ['mois' => 'DESC']);
-        $lignesFraisForfaitFichesUser = [];
 
         foreach($ficheFrais as $fiche)
         {
-            array_push($lignesFraisForfaitFichesUser, $ligneFraisForfaitRepository->findBy(['fiche' => $fiche]));
-        }
+            $lignesFraisForfait = $fiche->getLignesFraisForfait()->toArray();
+            $lignesFraisHorsForfait = $fiche->getLignesFraisHorsForfait()->toArray();
 
-        foreach($lignesFraisForfaitFichesUser as $lignesFraisForfaitFiche)
-        {
-            $montantTotalLigne = 0;
-
-            foreach ($lignesFraisForfaitFiche as $ligneFraisForfait) {
+            $montantTotalForfait = 0;
+            foreach ($lignesFraisForfait as $ligneFraisForfait)
+            {
                 $quantite = $ligneFraisForfait->getQuantite();
                 $montant = $ligneFraisForfait->getFraisForfait()->getMontant();
-                $montantTotalLigne += $quantite * $montant;
+
+                $montantTotalForfait += $quantite * $montant;
             }
 
-            $lignesFraisForfaitFiche[0]->getFiche()->setMontantValide($montantTotalLigne);
+            $montantTotalHorsForfait = 0;
+            foreach ($lignesFraisHorsForfait as $ligneFraisHorsForfait)
+            {
+                $montantTotalHorsForfait += $ligneFraisHorsForfait->getMontant();
+            }
+
+            $fiche->setMontantValide($montantTotalForfait + $montantTotalHorsForfait);
+            $em->persist($fiche);
+            $em->flush();
         }
 
         return $this->render('fiche_frais/index.html.twig', [
-
             'fiche_frais' => $ficheFrais,
             'fiche_frais_admin' => $ficheFraisRepository->findAll(),
-            'montant'=> $montant,
         ]);
     }
 

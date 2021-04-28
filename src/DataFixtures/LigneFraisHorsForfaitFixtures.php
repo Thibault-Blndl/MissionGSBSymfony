@@ -17,7 +17,6 @@ class LigneFraisHorsForfaitFixtures extends Fixture implements DependentFixtureI
         $lignefraishorsforfait->setMontant(null);
         $lignefraishorsforfait->setDate(null);
         $lignefraishorsforfait->setFiche($this->getReference('fiche'));
-        //$this->addReference('lignefraishorsforfait',$lignefraishorsforfait);
         $manager->persist($lignefraishorsforfait);
 
         $lignefraishorsforfait1 = new LigneFraisHorsForfait();
@@ -25,7 +24,6 @@ class LigneFraisHorsForfaitFixtures extends Fixture implements DependentFixtureI
         $lignefraishorsforfait1->setMontant(null);
         $lignefraishorsforfait1->setDate(null);
         $lignefraishorsforfait1->setFiche($this->getReference('fiche'));
-        //$this->addReference('lignefraishorsforfait',$lignefraishorsforfait);
         $manager->persist($lignefraishorsforfait1);
 
         $lignefraishorsforfait2 = new LigneFraisHorsForfait();
@@ -33,7 +31,6 @@ class LigneFraisHorsForfaitFixtures extends Fixture implements DependentFixtureI
         $lignefraishorsforfait2->setMontant(null);
         $lignefraishorsforfait2->setDate(null);
         $lignefraishorsforfait2->setFiche($this->getReference('fiche2'));
-        //$this->addReference('lignefraishorsforfait2',$lignefraishorsforfait2);
         $manager->persist($lignefraishorsforfait2);
 
         $lignefraishorsforfait3 = new LigneFraisHorsForfait();
@@ -41,7 +38,6 @@ class LigneFraisHorsForfaitFixtures extends Fixture implements DependentFixtureI
         $lignefraishorsforfait3->setMontant(null);
         $lignefraishorsforfait3->setDate(null);
         $lignefraishorsforfait3->setFiche($this->getReference('fiche3'));
-        //$this->addReference('lignefraishorsforfait2',$lignefraishorsforfait2);
         $manager->persist($lignefraishorsforfait3);
 
         $manager->flush();

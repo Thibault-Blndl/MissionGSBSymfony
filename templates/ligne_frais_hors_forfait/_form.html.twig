@@ -9,13 +9,15 @@
             </tr>
             </thead>
             <tbody>
-            {% for i in 0..form|length-2 %}
-                <tr>
-                    <td>{{ form_row(form[i].libelle, {'attr':{'class':'form-control'}}) }}</td>
-                    <td>{{ form_row(form[i].date, {'date_pattern': '<span style="display: none;">{{ year }} {{ month }}</span> {{ day }}'}) }}</td>
-                    <td>{{ form_row(form[i].montant, {'attr':{'class':'form-control'}}) }}</td>
-                </tr>
-            {% endfor %}
+            {% if form|length >= 2 %}
+                {% for i in 0..form|length-2 %}
+                    <tr>
+                        <td>{{ form_row(form[i].libelle, {'attr':{'class':'form-control'}}) }}</td>
+                        <td>{{ form_row(form[i].date, {'date_pattern': '<span style="display: none;">{{ year }} {{ month }}</span> {{ day }}'}) }}</td>
+                        <td>{{ form_row(form[i].montant, {'attr':{'class':'form-control'}}) }}</td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
             </tbody>
         </table>
     </div>

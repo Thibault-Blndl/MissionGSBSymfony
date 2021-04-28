@@ -10,7 +10,6 @@ class TypeUserFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-
         $typeUser = new TypeUser();
         $typeUser->setLibelle("Visiteur");
         $this->addReference('visiteur', $typeUser);

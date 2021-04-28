@@ -173,6 +173,36 @@ class FicheFrais
     }
 
     /**
+     * @return Collection|LigneFraisForfait[]
+     */
+    public function getLignesFraisForfait(): Collection
+    {
+        return $this->ligneFraisForfait;
+    }
+
+    public function addLignesFraisForfait(LigneFraisForfait $lignesFraisForfait): self
+    {
+        if (!$this->ligneFraisForfait->contains($lignesFraisForfait)) {
+            $this->ligneFraisForfait[] = $lignesFraisForfait;
+            $lignesFraisForfait->setFiche($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLignesFraisForfait(LigneFraisForfait $lignesFraisForfait): self
+    {
+        if ($this->ligneFraisForfait->removeElement($lignesFraisForfait)) {
+            // set the owning side to null (unless already changed)
+            if ($lignesFraisForfait->getFiche() === $this) {
+                $lignesFraisForfait->setFiche(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
      * @return Collection|LigneFraisHorsForfait[]
      */
     public function getLignesFraisHorsForfait(): Collection
@@ -201,8 +231,9 @@ class FicheFrais
 
         return $this;
     }
+
     public function __toString()
-{
-    return $this->getId()."";
-}
+    {
+        return $this->getId()."";
+    }
 }
