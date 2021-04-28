@@ -91,6 +91,7 @@ class LigneFraisHorsForfaitController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $ficheFrais->setDateModif(new \DateTime());
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('fiche_frais_index');

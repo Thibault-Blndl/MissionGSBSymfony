@@ -81,7 +81,7 @@ class FicheFraisController extends AbstractController
             $entityManager->persist($ficheFrai);
             $entityManager->flush();
 
-            return $this->redirectToRoute('fiche_frais_show', ['id'=>$ficheFrai->getId()]);
+            return $this->redirectToRoute('fiche_frais_index', ['id'=>$ficheFrai->getId()]);
         }
 
         return $this->render('fiche_frais/new.html.twig', [

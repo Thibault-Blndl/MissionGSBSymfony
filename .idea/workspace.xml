@@ -21,11 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b198c5af-7d25-4c44-8ab1-915f60f63622" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/FraisForfaitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FraisForfaitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LigneFraisForfaitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LigneFraisForfaitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/FicheFraisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FicheFraisController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LigneFraisHorsForfaitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LigneFraisHorsForfaitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_forfait/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ligne_frais_forfait/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ligne_frais_hors_forfait/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/FicheFraisType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FicheFraisType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/FraisForfaitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/FraisForfaitType.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +216,7 @@
       <workItem from="1616750058225" duration="1972000" />
       <workItem from="1616781554500" duration="233000" />
       <workItem from="1617629154936" duration="9866000" />
-      <workItem from="1619547713465" duration="22058000" />
+      <workItem from="1619547713465" duration="23750000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout partie graphique accueil">
       <created>1616240231786</created>
@@ -240,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619629168534</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Gérer les accès authentifié / non authentifié (injections URL), fix quand pas de ligne forfait / hors forfait">
+      <created>1619630543494</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619630543494</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +281,8 @@
     <MESSAGE value="Ajout partie graphique accueil" />
     <MESSAGE value="Fix calcul montant + ajout hors forfait" />
     <MESSAGE value="Calcul montant frais forfait + frais hors forfait et push en BDD, mise au propre fixtures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calcul montant frais forfait + frais hors forfait et push en BDD, mise au propre fixtures" />
+    <MESSAGE value="Gérer les accès authentifié / non authentifié (injections URL), fix quand pas de ligne forfait / hors forfait" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gérer les accès authentifié / non authentifié (injections URL), fix quand pas de ligne forfait / hors forfait" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616181071886">
@@ -290,14 +297,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="743" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1619555192482" />
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619564170159">
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619630984971">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1619564170159" />
-    <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2" timestamp="1619629168271">
+    <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1619630984971" />
+    <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2" timestamp="1619630543362">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1619629168271" />
+    <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1619630543362" />
     <state x="557" y="351" key="Github.ShareDialog" timestamp="1616179415366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -310,10 +317,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1619554332977" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1619629169948">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1619630544772">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1619629169948" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1619630544772" />
     <state x="627" y="25" width="680" height="638" key="dock-window-1" timestamp="1616347098313">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -326,9 +333,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1619557897734" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1619629443276">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1619631474318">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1619629443276" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1619631474318" />
   </component>
 </project>

@@ -16,7 +16,6 @@ class FraisForfaitType extends AbstractType
         $builder
             ->add('libelle',TextType::class, ['attr'=> ['readonly' => true], 'label' => false])
             ->add('montant', TextType::class, ['attr'=> ['readonly' => true], 'label' => false])
-            //->add('ligneFraisForfait')
         ;
     }
 
