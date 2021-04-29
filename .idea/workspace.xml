@@ -19,7 +19,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b198c5af-7d25-4c44-8ab1-915f60f63622" name="Default Changelist" comment="">
+    <list default="true" id="b198c5af-7d25-4c44-8ab1-915f60f63622" name="Default Changelist" comment="Merge des composants ligne frais forfait et ligne frais hors forfait, modif wording">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +218,7 @@
       <workItem from="1616781554500" duration="233000" />
       <workItem from="1617629154936" duration="9866000" />
       <workItem from="1619547713465" duration="35817000" />
-      <workItem from="1619690743602" duration="879000" />
+      <workItem from="1619690743602" duration="282000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout partie graphique accueil">
       <created>1616240231786</created>
@@ -323,10 +323,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="209" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1619633534022" />
-    <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2" timestamp="1619646919361">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="304" y="48" width="831" height="810" key="CommitChangelistDialog2" timestamp="1619692971177">
+      <screen x="0" y="25" width="1440" height="812" />
     </state>
     <state x="304" y="25" width="831" height="810" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1619646919361" />
+    <state x="304" y="48" key="CommitChangelistDialog2/0.25.1440.812@0.25.1440.812" timestamp="1619692971177" />
     <state x="557" y="351" key="Github.ShareDialog" timestamp="1616179415366">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
