@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b198c5af-7d25-4c44-8ab1-915f60f63622" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MissionGSBSymfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MissionGSBSymfony.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,10 +340,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="421" y="82" width="714" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1619562201167" />
-    <state x="385" y="210" key="run.anything.popup" timestamp="1619557897734">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="385" y="214" key="run.anything.popup" timestamp="1619695925615">
+      <screen x="0" y="25" width="1440" height="812" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1619557897734" />
+    <state x="385" y="214" key="run.anything.popup/0.25.1440.812@0.25.1440.812" timestamp="1619695925615" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1619644637176">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
